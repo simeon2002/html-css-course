@@ -1,0 +1,91 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+#099268
+#087f5b
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.accordion {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.item {
+  width: 700px;
+  margin: 0px auto;
+  background-color: #fff;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  box-shadow: 0 0px 32px rgba(0, 0, 0, 0.097);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: #099268;
+}
+
+.faq-number,
+.faq-title {
+  color: hsl(162, 27%, 75%);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.faq-title {
+  color: #343a40;
+  letter-spacing: -0.5;
+}
+
+.faq-description {
+  grid-column: 2;
+  display: none;
+}
+
+.faq-description p {
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.faq-description ul {
+  margin-left: 16px;
+  color: hsl(162, 15%, 60%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* open state */
+.open {
+  border-top: 4px solid #099268;
+}
+
+.open .faq-title,
+.open .faq-number {
+  color: #099268;
+}
+
+.open .faq-description {
+  display: block;
+}
