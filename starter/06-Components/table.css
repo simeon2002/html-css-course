@@ -1,0 +1,56 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+#099268
+#087f5b
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+body {
+  line-height: 1;
+  font-family: "Inter", sans-serif;
+}
+
+table {
+  width: 40%;
+  margin: 100px auto;
+}
+
+th {
+  width: 25%;
+  text-align: left;
+}
+
+th,
+td,
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px 16px;
+}
+
+thead {
+  background-color: #099268;
+  color: #fff;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f1f3f5;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #dee2e6;
+}
