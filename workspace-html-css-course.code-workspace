@@ -1,11 +1,13 @@
 {
-	"folders": [
-		{
-			"path": "starter"
-		},
-		{
-			"path": "final"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "starter",
+    },
+    {
+      "path": "final",
+    },
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "starter",
+  },
 }
