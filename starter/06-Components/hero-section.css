@@ -1,0 +1,81 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+#099268
+#087f5b
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* line-height: 1; */
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+header {
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(rgba(34, 34, 34, 0.6), rgba(34, 34, 34, 0.6)), url("./hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 24px;
+}
+
+.nav-container {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.header-container {
+  width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-text-container {
+  width: 50%;
+}
+
+h1 {
+  font-size: 48px;
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  font-weight: 800;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  background-color: hsl(28, 80%, 52%);
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.btn:active,
+.btn:hover {
+  background-color: hsl(28, 74%, 47%);
+}
