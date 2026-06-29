@@ -126,3 +126,21 @@ Careers
 Recipe directory
 Help center
 Privacy & terms
+
+######
+
+## Sections
+
+here -> explain what the product is about.
+
+- Logo + Navigation (since it's a landing page, it'll a link towards a section)
+- Hero
+- Featured in
+- How it works
+- Meals (and list of diets)
+- Gallery
+  From here -> selling tactics to try sell the product
+- Testimonials
+- Pricing (pattern is to use this on the bottom of website somewhere) + Features
+- CTA
+- Footer

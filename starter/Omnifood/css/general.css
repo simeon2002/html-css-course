@@ -1,0 +1,91 @@
+/* REUSABLE COMPONENTS */
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  letter-spacing: -0.6px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.05;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  margin-bottom: 3.2rem;
+}
+
+.btn:link,
+.btn:visited {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+  display: inline-block;
+  border-radius: 9px;
+  transition: all 0.3s;
+}
+
+.btn.btn--full:link,
+.btn.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn.btn--full:hover,
+.btn.btn--full:active {
+  background-color: #cf711f;
+  color: #fff;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  color: #333;
+  background-color: #fff;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 120rem;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 4.8rem;
+  row-gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid--3-cols {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid--center-vert {
+  align-items: center;
+}
+
+.grid--center-hor {
+  justify-items: center;
+}
