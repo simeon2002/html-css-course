@@ -14,7 +14,7 @@
 }
 
 .heading-secondary {
-  font-size: 4.4rem;
+  font-size: 4.8rem;
   line-height: 1.2;
   margin-bottom: 9.6rem;
 }
@@ -94,12 +94,20 @@
   margin-right: 1.6rem !important;
 }
 
+.margin-bottom-sm {
+  margin-bottom: 1.6rem !important;
+}
+
 .margin-bottom-md {
   margin-bottom: 2.4rem !important;
 }
 
 .margin-bottom-lg {
   margin-bottom: 4.8rem !important;
+}
+
+.margin-bottom-xl {
+  margin-bottom: 9.6rem !important;
 }
 
 strong {
@@ -116,6 +124,9 @@ strong {
   display: grid;
   column-gap: 4.8rem;
   row-gap: 9.6rem;
+
+  /* note he had added margin-bottom: 9.6 rem here, but I didn't do it which actually worked into my advantage later on for the price grid section! */
+  /* note: to have it on elements that you don't want to you can specify .grid:not(:last-child){margin-bottom: 9.6rem;} for example. */
 }
 
 .grid--2-cols {
@@ -126,10 +137,42 @@ strong {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.grid--center-vert {
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+e .grid--center-vert {
   align-items: center;
 }
 
 .grid--center-hor {
   justify-items: center;
+}
+
+/* Component classes */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.list-item--pricing-card {
+  justify-content: center;
+}
+
+.list-item-icon {
+  color: #e67e22;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.list.list--pricing-card {
+  gap: 1.6rem;
 }
