@@ -1,0 +1,483 @@
+/*** MEDIA QUERIES TO MAKE THE SITE RESPONSIVED ***/
+/*** Below 1344px (HD ready screens) ***/
+
+@media (max-width: 84em) {
+  .hero-container {
+    max-width: 120rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+    margin-bottom: 8rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .step-number {
+    font-size: 6.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .section-meals .list {
+    gap: 1.6rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-img-box:nth-last-child(-n + 6) {
+    display: none;
+  }
+}
+
+/*** below 1136 px (landscape tablet) ***/
+@media (max-width: 71em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .cta-form label {
+    font-size: 1.8rem;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .pricing-card-price {
+    font-size: 5.2rem;
+  }
+}
+
+/*** below 992 px (tablet) ***/
+@media (max-width: 62em) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 8rem;
+    padding: 0 12.8rem;
+  }
+
+  .hero-section {
+    padding: 4.8rem 0 8rem 0;
+  }
+
+  .delivered-container {
+    margin-top: 4.8rem;
+  }
+
+  .hero-img-container {
+    text-align: center;
+  }
+
+  .hero-text-container {
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  .featured-img {
+    height: 2.4rem;
+  }
+
+  .meal-description-box {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+
+  .meal-title {
+    font-size: 2rem;
+  }
+
+  .meal-attributes {
+    font-size: 1.6rem;
+  }
+
+  .pricing-card {
+    padding: 4.8rem;
+    width: 85%;
+  }
+
+  .testimonials-container {
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+  }
+
+  .section-testimonials {
+    padding: 9.6rem 3.2rem 3.2rem;
+  }
+
+  .testimonials-box {
+    padding: 0;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .gallery-img-box:nth-last-child(-n + 6) {
+    display: inline-block;
+  }
+
+  .grid--cta.grid {
+    grid-template-columns: 1.5fr 1.5fr;
+  }
+
+  .cta-text-box {
+    padding: 4.8rem 0 4.8rem 4.8rem;
+  }
+
+  .heading-cta.heading-secondary {
+    font-size: 3rem;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+
+  .btn--cta.btn {
+    margin-top: 0.8rem;
+  }
+
+  /* Mobile navigation */
+  .header {
+    position: relative;
+  }
+
+  .main-nav {
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6.4rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.4s;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  /* Note: so a component variation is essentially created by using an additional class with which we manipulate all of its descendants essentially! */
+  .nav-open .main-nav {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    background-color: hsla(0, 0%, 100%, 0.95);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="reorder-three-outline"] {
+    display: none;
+  }
+}
+
+/*** below 789 px (Phone landscape + tablet) ***/
+@media (max-width: 49em) {
+  html {
+    font-size: 50%;
+  }
+
+  .step-img {
+    width: 50%;
+  }
+
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .diet-list-box {
+    grid-column: span 2;
+    text-align: center;
+  }
+
+  .diet-list-box .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list-item {
+    gap: 0.4rem;
+  }
+  .meal-box {
+    width: 90%;
+  }
+
+  .meal-box:first-child {
+    justify-self: end;
+  }
+
+  .testimonials {
+    row-gap: 3.2rem;
+  }
+
+  .section-pricing {
+    padding: 9.6rem 0 4.8rem;
+  }
+
+  .pricing-card {
+    width: 95%;
+  }
+
+  .section-cta {
+    padding: 4.8rem 0 9.6rem;
+  }
+
+  .section-footer {
+    padding: 9.6rem 0 4.8rem;
+  }
+
+  .grid--footer.grid {
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 9.6rem;
+  }
+
+  .logo-col,
+  .address-col {
+    grid-row: 2;
+    grid-column: span 3;
+  }
+
+  .nav-col {
+    grid-column: span 2;
+  }
+}
+
+/*** below 608px (smaller tablets) ***/
+@media (max-width: 38em) {
+  .section-how-to {
+    padding: 8rem 0 4.8rem;
+  }
+
+  .section-pricing {
+    padding: 9.6rem 0 4.8rem 0;
+  }
+
+  .section-meals {
+    padding: 4.8rem 0 9.6rem;
+  }
+
+  .heading-primary {
+    font-size: 3.6rem;
+  }
+
+  .heading-secondary {
+    margin-bottom: 6.4rem;
+    font-size: 3rem;
+  }
+
+  .hero-container {
+    padding: 0 4.8rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+  }
+
+  .hero-btns .btn {
+    width: 100%;
+  }
+
+  .hero-description {
+    font-size: 1.8rem;
+  }
+
+  .featured-img {
+    height: 3rem;
+  }
+
+  .featured-img:last-child,
+  .featured-img:nth-child(4) {
+    display: none;
+  }
+
+  .grid--2-cols,
+  .grid--3-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .step-number {
+    font-size: 5.2rem;
+  }
+
+  .step-img {
+    width: 40%;
+  }
+
+  .step-img-box:nth-child(2) {
+    grid-row: 1 / span 1;
+  }
+
+  .step-img-box:last-child {
+    grid-row: 5 / span 1;
+  }
+
+  .step-text-box {
+    margin-top: -4.8rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .diet-list-box {
+    grid-column: span 1;
+  }
+
+  .meal-box {
+    justify-self: center !important;
+    width: 60%;
+  }
+
+  .meal-title {
+    font-size: 2.4rem;
+  }
+
+  .meal-attributes {
+    font-size: 1.8rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pricing-card {
+    width: 70%;
+    justify-self: center;
+  }
+
+  .pricing-card--complete {
+    grid-row: 1;
+  }
+
+  .pricing-card .btn {
+    width: 100%;
+  }
+
+  .grid--cta.grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-img {
+    height: 32rem;
+    grid-row: 1;
+  }
+
+  .cta-text-box {
+    padding: 0 9.6rem 4.8rem;
+  }
+
+  .heading-cta.heading-secondary {
+    margin-bottom: 2.4rem;
+  }
+
+  .cta-description {
+    margin-bottom: 3.2rem;
+  }
+}
+
+/*** below 416px (smaller tablets) ***/
+@media (max-width: 26em) {
+  html {
+    font-size: 43.75%;
+  }
+
+  /* .grid--2-cols, */
+  /* .grid--3-cols, */
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-description {
+    margin-top: 3.2rem;
+    margin-bottom: 4.8rem;
+  }
+
+  .hero-container {
+    padding: 0 2.4rem;
+  }
+
+  .hero-btns .btn {
+    width: 80%;
+  }
+
+  .featured-img {
+    height: 2rem;
+  }
+
+  .meal-box {
+    width: 75%;
+  }
+
+  .meal-title {
+    margin-bottom: 3.2rem;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+    padding: 0 3.2rem 3.2rem;
+    row-gap: 4rem;
+  }
+
+  .pricing-card {
+    width: 90%;
+  }
+
+  .grid:not(:last-child) {
+    margin-bottom: 6.4rem;
+  }
+
+  .feature {
+    text-align: center;
+  }
+
+  .feature-icon {
+    margin-bottom: 2.4rem;
+  }
+
+  .cta-text-box {
+    padding: 0 4.8rem 4.8rem;
+  }
+
+  .grid--footer.grid {
+    column-gap: 1.6rem;
+    row-gap: 4.8rem;
+  }
+}

@@ -11,10 +11,17 @@ body {
   font-size: 2rem;
   font-family: "Rubik", sans-serif;
   color: #555;
+  overflow-x: hidden;
 }
 
 html {
   font-size: 10px;
+  overflow-x: hidden;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #eea564;
 }
 
 /* Hero section */
@@ -42,6 +49,13 @@ html {
   line-height: 1.5;
   margin-top: 4.8rem;
   margin-bottom: 6.4rem;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .delivered-container {
@@ -110,6 +124,22 @@ html {
 .main-nav-item a:hover,
 .main-nav-item a:active {
   color: #cf711f;
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  display: none;
+  transition: all 0.3s;
+}
+
+.icon-mobile-nav {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }
 
 /* Featured-in Section */
@@ -258,7 +288,7 @@ html {
 }
 
 .meal-description-box {
-  padding: 4rem 0 4.8rem 4.8rem;
+  padding: 4rem 4.8rem 4.8rem 4.8rem;
 }
 
 .meal-attributes {
@@ -357,15 +387,16 @@ html {
 }
 
 .pricing-card {
-  padding: 6.4rem;
   width: 75%;
+  border-radius: 12px;
+  padding: 6.4rem;
 }
 
 .pricing-card--complete {
   background-color: #fdf2e9;
-  border-radius: 12px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.05);
 }
 
 .pricing-card--complete::after {
@@ -384,6 +415,7 @@ html {
 
 .pricing-card--starter {
   justify-self: end;
+  border: 2px solid #fdf2e9;
 }
 
 .pricing-card-title {
@@ -396,7 +428,7 @@ html {
 
 .pricing-card-price {
   color: #333;
-  font-size: 4.8rem;
+  font-size: 6.2rem;
   font-weight: 700;
   margin-bottom: 1.6rem;
 }
@@ -406,7 +438,7 @@ html {
 }
 
 .pricing-card-price-per-meal {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #6f6f6f;
   margin-bottom: 4.8rem;
 }
@@ -439,4 +471,166 @@ html {
 .feature-description {
   font-size: 1.8rem;
   line-height: 1.8;
+}
+
+/* CTA section */
+.section-cta {
+  padding: 4.8rem 0 12.8rem;
+}
+
+.grid--cta.grid {
+  grid-template-columns: 2fr 1fr;
+}
+
+.cta {
+  border-radius: 11px;
+  color: #100902;
+  overflow: hidden;
+  background-image: linear-gradient(to right, hsl(28, 74%, 41%), #e67e22);
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.cta-text-box {
+  padding: 6.4rem 6.4rem 6.4rem 6.4rem;
+}
+
+.heading-cta.heading-secondary {
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+.cta-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-img {
+  background-image: linear-gradient(hsla(28, 74%, 41%, 0.446), hsla(28, 80%, 52%, 0.407)), url("../img/eating.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2.4rem;
+  row-gap: 2.4rem;
+  align-items: center;
+}
+
+.cta-form label {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 9px;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+  background-color: #fdf2e9;
+  color: inherit;
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta-form *:focus {
+  box-shadow: 0 0 0 4px #d9d9d988;
+
+  outline: none;
+}
+
+.btn--cta.btn {
+  background-color: #100902;
+  color: #fff;
+  align-self: end;
+  padding: 1.2rem 2.4rem;
+}
+
+.btn--cta.btn:hover {
+  background-color: #fff;
+  color: #100902;
+}
+
+/* Footer section */
+
+.section-footer {
+  font-size: 1.6rem;
+  padding: 9.6rem 0;
+  border-top: 2px solid hsla(0, 0%, 44%, 0.092);
+}
+
+.logo--footer {
+  height: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: auto;
+}
+
+.social-links ion-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #555;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.footer-header {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1.6rem;
+}
+
+.link--footer {
+  display: inline-block;
+  padding-bottom: 0.1rem;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.link--footer:hover {
+  box-shadow: inset 0 -1px 0 #555;
+}
+
+.link--contact:first-of-type {
+  margin-bottom: 0.4rem;
+}
+
+.grid--footer.grid {
+  grid-template-columns: 33.32fr 33.32fr repeat(3, 16.66fr);
 }
