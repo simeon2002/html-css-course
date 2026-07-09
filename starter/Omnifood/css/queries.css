@@ -75,6 +75,10 @@
     padding: 4.8rem 0 8rem 0;
   }
 
+  .hero-btns {
+    justify-content: center;
+  }
+
   .delivered-container {
     margin-top: 4.8rem;
   }
@@ -110,6 +114,10 @@
   .pricing-card {
     padding: 4.8rem;
     width: 85%;
+  }
+
+  .testimonials {
+    column-gap: 6.4rem;
   }
 
   .testimonials-container {
@@ -159,7 +167,9 @@
   }
 
   .main-nav {
+    background-color: hsla(0, 0%, 100%, 0.95);
     width: 100vw;
+    height: 100vh;
     position: absolute;
     left: 0;
     top: 0;
@@ -167,9 +177,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6.4rem;
+    /* padding: 6.4rem; */
     opacity: 0;
     visibility: hidden;
+    /* Looks like it animates first and only then does it hide the elements, so makes transitionss possible! */
     pointer-events: none;
     transition: all 0.4s;
   }
@@ -178,16 +189,17 @@
     flex-direction: column;
     gap: 2.4rem;
   }
+
   .btn-mobile-nav {
     display: block;
   }
 
   /* Note: so a component variation is essentially created by using an additional class with which we manipulate all of its descendants essentially! */
   .nav-open .main-nav {
+    pointer-events: auto;
     visibility: visible;
     opacity: 1;
-    transform: scale(1);
-    background-color: hsla(0, 0%, 100%, 0.95);
+    transform: translateX(0);
   }
 
   .nav-open .icon-mobile-nav[name="close-outline"] {
@@ -275,7 +287,7 @@
   }
 }
 
-/*** below 608px (smaller tablets) ***/
+/*** below 608px (phones) ***/
 @media (max-width: 38em) {
   .section-how-to {
     padding: 8rem 0 4.8rem;
@@ -413,7 +425,7 @@
   }
 }
 
-/*** below 416px (smaller tablets) ***/
+/*** below 416px (phones) ***/
 @media (max-width: 26em) {
   html {
     font-size: 43.75%;

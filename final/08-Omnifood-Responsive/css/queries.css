@@ -150,7 +150,7 @@
     /* 2) Make it unaccessible to mouse and keyboard */
     pointer-events: none;
 
-    /* 3) Hide it from screen readers */
+    /* 3) Hide it from screen and screen readers */
     visibility: hidden;
   }
 

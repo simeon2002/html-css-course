@@ -54,7 +54,6 @@ html {
 .hero-btns {
   display: flex;
   gap: 1.6rem;
-  justify-content: center;
   align-items: center;
 }
 
