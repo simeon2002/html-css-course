@@ -1,4 +1,4 @@
-console.log("Hello world!");
+sconsole.log("Hello world!");
 
 const myName = "Jonas Schmedtmann";
 const h1 = document.querySelector(".heading-primary");
@@ -51,8 +51,7 @@ allLinks.forEach(function (link) {
     }
 
     // Close mobile naviagtion
-    if (link.classList.contains("main-nav-link"))
-      headerEl.classList.toggle("nav-open");
+    if (link.classList.contains("main-nav-link")) headerEl.classList.toggle("nav-open");
   });
 });
 
@@ -79,7 +78,7 @@ const obs = new IntersectionObserver(
     root: null,
     threshold: 0,
     rootMargin: "-80px",
-  }
+  },
 );
 obs.observe(sectionHeroEl);
 

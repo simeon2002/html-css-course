@@ -2,6 +2,19 @@
 const navLinks = Array.from(document.querySelectorAll(".main-nav-list a"));
 navLinks.push(...document.querySelectorAll(".hero-section a"));
 
+const navList = document.querySelector(".main-nav-list");
+navList.addEventListener("click", e => {
+  console.log(e.target);
+  if (e.target.tagName === "A") {
+    e.preventDefault();
+    document.querySelector(".header").classList.remove("nav-open");
+    const href = e.target.getAttribute("href");
+    const section = document.querySelector(href);
+    console.log(section);
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+});
+
 // Adding sticky navbar
 const observer = new IntersectionObserver(cb, {
   root: null,
@@ -29,15 +42,21 @@ btnMobileNav.addEventListener("click", e => {
   document.querySelector(".header").classList.toggle("nav-open");
 });
 
-const navList = document.querySelector(".main-nav-list");
-navList.addEventListener("click", e => {
-  console.log(e.target);
-  if (e.target.tagName === "A") {
-    e.preventDefault();
-    document.querySelector(".header").classList.remove("nav-open");
-    const href = e.target.getAttribute("href");
-    const section = document.querySelector(href);
-    console.log(section);
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-});
+// add flexbox gap support for safari browsers
+function checkFlexGap() {
+  var flex = document.createElement("div");
+  flex.style.display = "flex";
+  flex.style.flexDirection = "column";
+  flex.style.rowGap = "1px";
+
+  flex.appendChild(document.createElement("div"));
+  flex.appendChild(document.createElement("div"));
+
+  document.body.appendChild(flex);
+  var isSupported = flex.scrollHeight === 1;
+  flex.parentNode.removeChild(flex);
+  console.log(isSupported);
+
+  if (!isSupported) document.body.classList.add("no-flexbox-gap");
+}
+checkFlexGap();
